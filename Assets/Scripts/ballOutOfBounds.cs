@@ -47,7 +47,6 @@ public class ballOutOfBounds : MonoBehaviour
         //, then continue to decrease
         if (velocityDecreaseStopper)
         {
-            Debug.Log("RUN " + velocityDecreaseStopper);
             Ball.velocity = Ball.velocity * 0.9969f;
         }
 
@@ -59,7 +58,6 @@ public class ballOutOfBounds : MonoBehaviour
         if (collision.gameObject.name == "Terrain")
         {
             velocityDecreaseStopper = false;
-            Debug.Log("here =========" + velocityDecreaseStopper);
         }
     }
 }
