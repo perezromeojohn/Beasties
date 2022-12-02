@@ -5,40 +5,44 @@ using UnityEngine;
 public class GoalCollision : MonoBehaviour
 {
     public GameObject ring;
-    private int team1score =0;
+    private int score =0;
     private int team2score =0;
-
+    private bool stopPlaying = false;
 
     private void OnTriggerEnter(Collider other)
     {
    
-        if (other.gameObject.name == "ball") //ball goes innnnnnn
+        if (other.gameObject.name == "ball" && !stopPlaying) //ball goes innnnnnn
         {
-           
-            if (ring.name == "Team1")
-            {
-                team1score++;
-                Debug.Log("team1 "+ team1score);
+            score++;
+           // if (ring.name == "Team1")
+            //{
+            //    team1score++;
+            //    Debug.Log("team1 "+ team1score);
 
-            }
-            if (ring.name == "Team2")
-            {
-                team2score++;
-                Debug.Log("team1 " + team2score);
-            }
+            //}
+            //if (ring.name == "Team2")
+            //{
+            //    team2score++;
+            //    Debug.Log("team1 " + team2score);
+           // }
 
         }
     }
  
 
+        
 
-
-    public int getTeam1Score()
+    public int getScore()
     {
-        return team1score;
+        return score;
     }
     public int getTeam2Score()
     {
         return team2score;
+    }
+    public void stopPlayingOnGameOverToggle()
+    {
+        stopPlaying = !stopPlaying;
     }
 }

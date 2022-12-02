@@ -16,7 +16,7 @@ public class Team1Score : MonoBehaviour
         Transform textTr = canvas.transform.Find("team1_score");
         Text text = textTr.GetComponent<Text>();
 
-        score = goal.GetComponent<GoalCollision>().getTeam1Score(); //initial score
+        score = goal.GetComponent<GoalCollision>().getScore(); //initial score
         text.text = "Team 1: " + score.ToString();
     }
 
