@@ -9,6 +9,7 @@ public class Timer : MonoBehaviour
     public float timeRemaining = 15; //in seconds
     public bool timerIsRunning = false;
     public GameObject canvas;
+    public GameOverScreen gameOver;
     private Text text;
     // Start is called before the first frame update
     void Start()
@@ -33,10 +34,10 @@ public class Timer : MonoBehaviour
             else
             {
                 text.text = "00:00:00"; // because idk , it turns to negative
-                    
-                Debug.Log("Do something when timer runs out");
                 timeRemaining = 0;
                 timerIsRunning = false;
+                gameOver.Setup();
+          
             }
         }
     }
