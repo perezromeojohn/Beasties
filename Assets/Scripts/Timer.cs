@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
 
-    public float timeRemaining = 15; //in seconds
+    public float timeRemaining = 180; //in seconds
     public bool timerIsRunning = false;
     public GameObject canvas;
     public GameOverScreen gameOver;

@@ -367,7 +367,7 @@ GameObject:
   - component: {fileID: 5773821233211614225}
   m_Layer: 0
   m_Name: Player 1
-  m_TagString: Untagged
+  m_TagString: Player1
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -381,7 +381,7 @@ Transform:
   m_GameObject: {fileID: 5773821233211614231}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.05, y: 2.31, z: 0.1547785}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 7872372197201823933}
   - {fileID: 6692861434543315042}
@@ -453,6 +453,8 @@ MonoBehaviour:
   rb: {fileID: 0}
   dust: {fileID: 6692861434543315040}
   isGrounded: 1
+  Horizontal: 0
+  Vertical: 0
 --- !u!1 &6288564531343188438
 GameObject:
   m_ObjectHideFlags: 0
