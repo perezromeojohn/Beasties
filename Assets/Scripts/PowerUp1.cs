@@ -8,6 +8,8 @@ public class PowerUp1 : MonoBehaviour
     public Transform player2;
     public float scaleSpeed = 2.0f;
     public float duration = 5.0f;
+    // add sfx
+    public AudioSource powerUpSound;
 
     void Update() {
         transform.Rotate(0, 50 * Time.deltaTime, 0);
@@ -16,6 +18,7 @@ public class PowerUp1 : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
+        // if the player collides with the powerup
         if (other.gameObject.CompareTag("Player1"))
         {
             StartCoroutine(ScalePlayer(player1));
@@ -28,6 +31,8 @@ public class PowerUp1 : MonoBehaviour
 
     IEnumerator ScalePlayer(Transform player)
     {
+        // play sfx
+        powerUpSound.Play();
         GetComponent<MeshRenderer>().enabled = false;
         GetComponent<Collider>().enabled = false;
         

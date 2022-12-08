@@ -24,7 +24,7 @@ public class GameOverScreen : MonoBehaviour
         Debug.Log("clicked");
         goal1.stopPlayingOnGameOverToggle();
         goal2.stopPlayingOnGameOverToggle();
-        SceneManager.LoadScene("Test Scene");
+        SceneManager.LoadScene("Start Screen");
     
     }
 }

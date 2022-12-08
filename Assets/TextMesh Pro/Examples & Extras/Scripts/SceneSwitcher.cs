@@ -6,8 +6,20 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitcher : MonoBehaviour
 {
-    public void level1()
+    public string[] sceneNames;
+
+    public void LoadRandomScene()
     {
-        SceneManager.LoadScene("Test Scene");
+        // Generate a random index between 0 and the length of the sceneNames array
+        int randomIndex = Random.Range(0, sceneNames.Length);
+
+        // Get the name of the scene at the random index
+        string sceneName = sceneNames[randomIndex];
+
+        // Load the scene
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+    }
+    public void Developer() {
+        SceneManager.LoadScene("Developer");
     }
 }

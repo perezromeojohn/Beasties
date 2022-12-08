@@ -113,3 +113,4 @@ MonoBehaviour:
   player2: {fileID: 6713906698169207262, guid: d70125c026b1aee4fa322f09e4df42cb, type: 3}
   scaleSpeed: 2
   duration: 5
+  powerUpSound: {fileID: 8300000, guid: 3fce3bb3b516ae144ad1e597a91be260, type: 3}
