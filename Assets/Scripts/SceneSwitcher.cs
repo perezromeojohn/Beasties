@@ -6,7 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitcher : MonoBehaviour
 {
+    [SerializeField] RectTransform fader;
     public string[] sceneNames;
+
+    private void Start() {
+        fader.gameObject.SetActive(true);
+
+        LeanTween.scale(fader, new Vector3(1, 1, 1), 0);
+        LeanTween.scale(fader, Vector3.zero, 0.5f).setOnComplete(() => {
+            fader.gameObject.SetActive(false);
+        });
+    }
 
     public void LoadRandomScene()
     {
@@ -15,9 +25,15 @@ public class SceneSwitcher : MonoBehaviour
 
         // Get the name of the scene at the random index
         string sceneName = sceneNames[randomIndex];
+        fader.gameObject.SetActive(true);
+        LeanTween.scale(fader, Vector3.zero, 0f);
+        LeanTween.scale(fader, new Vector3(1, 1, 1), 0.5f).setOnComplete(() => {
+            // Load the scene
+            SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+        });
+        
 
-        // Load the scene
-        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+        
     }
     public void Developer() {
         SceneManager.LoadScene("Developer");

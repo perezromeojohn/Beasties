@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GoalCollision : MonoBehaviour
 {
+    public AudioSource goalSound;
     public GameObject ring;
     private int score =0;
     private int team2score =0;
@@ -12,9 +13,10 @@ public class GoalCollision : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
    
-        if (other.gameObject.name == "ball" && !stopPlaying) //ball goes innnnnnn
+        if (other.gameObject.tag == "Ball" && !stopPlaying) //ball goes innnnnnn
         {
             score++;
+            goalSound.Play();
            // if (ring.name == "Team1")
             //{
             //    team1score++;
