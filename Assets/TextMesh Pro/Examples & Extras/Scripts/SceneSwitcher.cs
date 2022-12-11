@@ -22,4 +22,8 @@ public class SceneSwitcher : MonoBehaviour
     public void Developer() {
         SceneManager.LoadScene("Developer");
     }
+
+    public void Quit() {
+        Application.Quit();
+    }
 }

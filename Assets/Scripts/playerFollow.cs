@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class playerFollow : MonoBehaviour
 {
+    // serialize field for vector 3 position
+    [SerializeField] private Vector3 position;
     // get the player object
     public GameObject player1;
     public GameObject player2;
@@ -17,7 +19,6 @@ public class playerFollow : MonoBehaviour
     void Update()
     {
         // set the camera's position to its current position
-        Vector3 position = transform.position;
         // dynamic camera attached to player 1 and 2 while keeping the camera in the middle of the two players
         position.x = (player1.transform.position.x + player2.transform.position.x) / 2;
         position.y = (player1.transform.position.y + player2.transform.position.y) / 2;
