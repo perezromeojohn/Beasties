@@ -13,7 +13,7 @@ public class TransitionToTitle : MonoBehaviour
 
     IEnumerator Transition()
     {
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(14);
         SceneManager.LoadScene("Start Screen");
     }
 }

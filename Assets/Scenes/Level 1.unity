@@ -1990,7 +1990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 205cd966771638b42a49e259e923baf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 40
+  timeRemaining: 180
   timerIsRunning: 0
   canvas: {fileID: 2128245579}
   gameOver: {fileID: 978343428}
@@ -7144,10 +7144,10 @@ AudioSource:
   m_GameObject: {fileID: 2128245579}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 4a76314cebfb9b9409d6b2ea348a20bd, type: 2}
   m_audioClip: {fileID: 8300000, guid: 237288582077d3f4b8d36675a7aa6324, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.54
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
